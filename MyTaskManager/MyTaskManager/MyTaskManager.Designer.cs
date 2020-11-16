@@ -30,23 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.ProcessId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ProcessPriority = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ProcessName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ProcessId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ProcessMemoryUsage = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ProcessPriority = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ProcessThreads = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listView1
             // 
-            this.listView1.AllowColumnReorder = true;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ProcessId,
             this.ProcessName,
-            this.ProcessPriority,
+            this.ProcessId,
             this.ProcessMemoryUsage,
+            this.ProcessPriority,
             this.ProcessThreads});
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.HideSelection = false;
@@ -57,37 +56,35 @@
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
-            // timer1
+            // ProcessName
             // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.ProcessName.Text = "Name";
+            this.ProcessName.Width = 82;
             // 
             // ProcessId
             // 
             this.ProcessId.Text = "Id";
             this.ProcessId.Width = 45;
             // 
-            // ProcessPriority
-            // 
-            this.ProcessPriority.DisplayIndex = 1;
-            this.ProcessPriority.Text = "Priority";
-            this.ProcessPriority.Width = 90;
-            // 
-            // ProcessName
-            // 
-            this.ProcessName.DisplayIndex = 2;
-            this.ProcessName.Text = "Name";
-            this.ProcessName.Width = 82;
-            // 
             // ProcessMemoryUsage
             // 
             this.ProcessMemoryUsage.Text = "Process memory usage";
             this.ProcessMemoryUsage.Width = 173;
             // 
+            // ProcessPriority
+            // 
+            this.ProcessPriority.Text = "Priority";
+            this.ProcessPriority.Width = 90;
+            // 
             // ProcessThreads
             // 
             this.ProcessThreads.Text = "Threads";
             this.ProcessThreads.Width = 84;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // button1
             // 

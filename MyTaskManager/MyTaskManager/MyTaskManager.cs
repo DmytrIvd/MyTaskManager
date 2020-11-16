@@ -32,11 +32,12 @@ namespace MyTaskManager
 
             ListViewItem lv = new ListViewItem();
             lv.Tag = process;
-            lv.Text = process.Id.ToString();
+            lv.Text = process.ProcessName;
 
-            lv.SubItems.Add(new ListViewItem.ListViewSubItem(lv, process.ProcessName));
-            lv.SubItems.Add(new ListViewItem.ListViewSubItem(lv, process.BasePriority.ToString()));
+            lv.SubItems.Add(new ListViewItem.ListViewSubItem(lv, process.Id.ToString()));
             lv.SubItems.Add(new ListViewItem.ListViewSubItem(lv, process.WorkingSet64.ToString()));
+            lv.SubItems.Add(new ListViewItem.ListViewSubItem(lv, process.BasePriority.ToString()));
+
             lv.SubItems.Add(new ListViewItem.ListViewSubItem(lv, process.Threads.Count.ToString()));
 
 
